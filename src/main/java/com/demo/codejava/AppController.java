@@ -18,4 +18,12 @@ public class AppController {
 		model.addAttribute("listProducts", lisProducts);
 		return "index";
 	}
+	
+	@RequestMapping("/new")
+	public String showNewProductForm(Model model) {
+		Product product = new Product();
+		model.addAttribute("product", product);
+		
+		return "new_product";
+	}
 }
